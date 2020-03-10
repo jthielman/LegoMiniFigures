@@ -34,7 +34,7 @@ namespace LegoMiniFigures
             var astronaut = new Astronaut("Space Person", "Janitor", head, torso, legs);
             var astronaut2 = new Astronaut("Space Lady", "Janitor", head, torso, legs);
 
-            astronaut.DoYourJob();
+            astronaut.DoYourJob(100);
 
             var casper = new Ghost("Casper", DateTime.Today)
             {
