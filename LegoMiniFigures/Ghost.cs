@@ -9,7 +9,7 @@ namespace LegoMiniFigures
         public bool Friendly { get; set; }
         public bool IsVisible { get; set; }
         public string Name { get; set; }
-        public string HauntingLocation { get; }
+        public string HauntingLocation { get; private set; }
         public DateTime DeathDay { get; }
 
         public Ghost(string name, DateTime deathDay)
