@@ -15,12 +15,12 @@ namespace LegoMiniFigures
         public string Job { get; private set; } // Public property with a private setter (Job can be set by a method in this class, but not from without)
         public int OxygenLevel { private get; set; } // Public property with a private getter (can be set but not retrieved from without)
 
-        public AstronautTorso Torso { get; set; }
+        public TorsoBase Torso { get; set; }
         public AstronautLegs Legs { get; set; }
         public ZoeHead Head { get; set; }
 
         public Astronaut(string name, string job,
-                         ZoeHead head, AstronautTorso torso,
+                         ZoeHead head, TorsoBase torso,
                          AstronautLegs legs)
         {
             Name = name;
@@ -38,7 +38,7 @@ namespace LegoMiniFigures
 
         public void DoYourJob(int stepsToWalk)
         {
-            Console.WriteLine($"Doing all my {Job} duties...");
+            Console.WriteLine($"{Name} is doing all their {Job} duties...");
             Legs.Walk(stepsToWalk);
             Head.EatPie("Cherry");
             Torso.Flex();

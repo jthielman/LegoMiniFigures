@@ -2,6 +2,7 @@
 using LegoMiniFigures.Composition.Legs;
 using LegoMiniFigures.Composition.Torsos;
 using System;
+using System.Collections.Generic;
 
 namespace LegoMiniFigures
 {
@@ -23,18 +24,29 @@ namespace LegoMiniFigures
                 Shoes = ShoeType.FlipFlops
             };
 
-            var torso = new AstronautTorso
+            var dtorso = new DadBodTorso
             {
                 HandType = HandType.Baby,
                 ChiseledAbs = true,
-                NumberOfArms = 3,
                 Shirted = true
             };
 
-            var astronaut = new Astronaut("Space Person", "Janitor", head, torso, legs);
-            var astronaut2 = new Astronaut("Space Lady", "Janitor", head, torso, legs);
+            var atorso = new AstronautTorso
+            {
+                HandType = HandType.Baby,
+                ChiseledAbs = true,
+                Shirted = true
+            };
 
-            astronaut.DoYourJob(100);
+            atorso.Breathe();
+            dtorso.Breathe();
+            atorso.HandType = HandType.Baby;
+            dtorso.ChiseledAbs = false;
+
+            var astronaut = new Astronaut("Space Person", "Janitor", head, atorso, legs);
+            var astronaut2 = new Astronaut("Space Lady", "Janitor", head, dtorso, legs);
+
+            astronaut2.DoYourJob(100);
 
             var casper = new Ghost("Casper", DateTime.Today)
             {
@@ -53,6 +65,15 @@ namespace LegoMiniFigures
             fatso.Spook();
             fatso.Haunt("Whipstaff Manor");
             fatso.Spook();
+
+            var torsos = new List<TorsoBase> { dtorso, atorso, new DadBodTorso() };
+
+            foreach (var torso in torsos)
+            {
+                torso.Breathe();
+                torso.Flex();
+            }
+
         }
     }
 }
