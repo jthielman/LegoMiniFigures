@@ -15,7 +15,7 @@ namespace LegoMiniFigures.Composition.Legs
         {
             if (CanWalk)
             {
-                Console.WriteLine($"Baby legs walk around {steps} steps and then fall over.");
+                Console.WriteLine($"Baby legs walk around {steps} steps and then topple over.");
             }
             else
             {
@@ -25,7 +25,7 @@ namespace LegoMiniFigures.Composition.Legs
 
         public void Kick()
         {
-            Console.WriteLine($"Baby legs kisk with the pwoer of {NumberOfRolls}.");
+            Console.WriteLine($"Baby legs kick with the power of {NumberOfRolls} fat rolls!");
         }
     }
 }

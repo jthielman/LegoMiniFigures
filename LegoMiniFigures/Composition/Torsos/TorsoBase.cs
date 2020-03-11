@@ -6,7 +6,7 @@ namespace LegoMiniFigures.Composition.Torsos
 {
     abstract class TorsoBase
     {
-        public abstract bool ChiseledAbs { get; set; }
+        public virtual bool ChiseledAbs { get; set; }
         public bool Shirted { get; set; }
         public HandType HandType { get; set; }
 

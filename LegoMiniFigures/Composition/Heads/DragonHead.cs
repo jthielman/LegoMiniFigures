@@ -16,12 +16,17 @@ namespace LegoMiniFigures.Composition.Heads
             Console.WriteLine("You are crunchy and good with ketchup");
         }
 
-
+        public void Breathe()
+        {
+            Console.WriteLine($"Dragon Head attacks with {BreathType} breath.");
+        }
     }
+
     enum BreathType
     {
         Stanky,
         Fire,
-        Poison
+        Poison,
+        Ice
     }
 }
